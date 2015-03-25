@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)http://www.ilcorsaronero.it/progettienvato/SiteParallax/ParallaxSite/minime/html/blog.html -->
+<html lang="en" class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Lucas kujawski</title>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="files/icon.css" rel="stylesheet" type="text/css">
+    <link href="files/css" rel="stylesheet" type="text/css">
+	<link href="files/css(1)" rel="stylesheet" type="text/css">
+    <link href="files/flexslider.css" rel="stylesheet" type="text/css">
+    <link href="files/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="files/owl.theme.css" rel="stylesheet" type="text/css">
+    <link href="files/style.css" rel="stylesheet" type="text/css">
+    <link href="files/responsive.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
+    <script src="files/ukokuja.js"></script>
+
+<style type="text/css"></style></head>
+<body ng-app="ukokuja">
+<!--<section id="closepage">
+    <div class="container">
+          <div class="row">
+           <div class="col-md-12 content-close-details">
+               <a href="http://www.ilcorsaronero.it/progettienvato/SiteParallax/ParallaxSite/minime/html/index.html" class="close-redirect"><img src="files/logo.png" style="width:15%;"></a>
+             </div>
+          </div>
+    </div>
+</section>
+-->
+ <section id="project" class="cd-section section-blog" >
+ <div class="container" ng-controller="TodoController">
+      <div ng-include="includes" ></div>
+      </div><!--close container-->
+ </section>
+ <hr>
+
+ <section id="section6" class="cd-section">
+      <div class="container">
+          <div class="row">
+           <div class="col-md-12">
+            <footer class="box-content" style="padding: 0px 0 30px 0;">
+			    <div class="footer-logo"><img src="files/logo.png" style="width: 10%" alt=""></div>
+                <br>
+                <div class="footer-social">
+                    <a href="http://github.com/ukokuja" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+                    <a href="http://stackoverflow.com/users/4691807/lucas-kujawski" title="Stack Overflow" target="_blank"><i class="fa fa-stack-overflow"></i></a>
+                    <a href="https://www.linkedin.com/profile/view?id=229227182" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="http://www.twitter.com/ukokuja" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="http://www.instagram.com/ukokuja" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+		    </footer>
+          </div>
+         </div>
+      </div>
+    </section>
+<script src="files/jquery.min.js" type="text/javascript"></script>
+<script src="files/jquery.flexslider.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: ""
+
+        });
+    });
+</script>
+
+<script src="files/owl.carousel.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    /********************************************
+    CAROUSEL DETAIL
+    ********************************************/
+    $("#owl-demo-details").owlCarousel({
+
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+        items: 4,
+        itemsDesktop: [1199, 3],
+        itemsDesktopSmall: [979, 3]
+
+    });
+</script>
+
+<script type="text/javascript">
+    /********************************************
+    CLOSE PAGE DETAIL
+    ********************************************/
+    $(document).ready(function () {
+        $(".close-redirect").click(function (event) {
+            event.preventDefault();
+            linkLocation = this.href;
+            $("body").fadeOut(1000, redirectPage);
+        });
+        function redirectPage() {
+            window.location = linkLocation;
+        }
+    });
+	</script>
+
+
+<style>.tb_button {padding:1px;cursor:pointer;border-right: 1px solid #8b8b8b;border-left: 1px solid #FFF;border-bottom: 1px solid #fff;}.tb_button.hover {borer:2px outset #def; background-color: #f8f8f8 !important;}.ws_toolbar {z-index:100000} .ws_toolbar .ws_tb_btn {cursor:pointer;border:1px solid #555;padding:3px}   .tb_highlight{background-color:yellow} .tb_hide {visibility:hidden} .ws_toolbar img {padding:2px;margin:0px}</style></body></html>

@@ -1,0 +1,93 @@
+<section id="closepage">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 content-close-details">
+                <a  href="/blog/" onclick="window.location.reload();" class="close-redirect" style="cursor: pointer"><i class="fa fa-times"></i>Close</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="row">
+    <h1 class="t-blog"> SINGLE POST </h1>
+    <div class="col-md-8">
+        <div class="box-content box-s-post">
+            <div class="blog-item first-child" style="padding-bottom: 0;">
+                <div class="blog-img" ng-if="simplepost.images[0]"><img src="files/{{simplepost.images[0]}}" alt=""></div>
+                <div class="blog-desc box-text single-post" style="border: 0px">
+                    <h2>{{simplepost.titulo}} <span class="date-blog">{{getTags(simplepost.tags)}} / {{simplepost.fecha[0]}}, {{simplepost.fecha[1]}}</span></h2>
+                    <div compile="simplepost.texto"></div>
+                </div>
+            </div>
+
+        </div><!--close box content-->
+        <div class="post-pagination">
+            <a ng-click="changeLocation('#?post='+getRand(simplepost.key))" style="cursor: pointer" class="next pull-right" >Next post <i class="fa fa-caret-right"></i></a>
+        </div>
+
+        <div class="post-comments" ng-if="simplepost.comments">
+            <h2><span class="fa fa-comments"></span>{{simplepost.comments.length}} Comment<span ng-if="simplepost.comments.length > 1">s</span></h2>
+            <div class="col-md-12 post-content-txt">
+                <div ng-repeat="comment in simplepost.comments">
+                    <div class="col-md-2 col-xs-2 b-mention-item-user f-center">
+                        <div class="b-mention-item-user-img">
+                            <img src="{{getPic(comment.picture)}}" alt="">
+                        </div>
+                        <div class="">
+                            <div class="f-mention-item-user-name f-primary-b">{{comment.name}}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-xs-10 b-remaining">
+                        <div class="b-mention-item__comment">
+                            <div class="b-mention-item__comment_text f-mention-item__comment_text">
+                                <span>{{comment.fecha}}</span>
+                                <p>{{comment.texto}}</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear separ-post"></div>
+                </div>
+
+            </div>
+        </div><!--Close Post Comment-->
+
+        <div class="leave-comment">
+            <h2><span class=" icon-pencil"></span>LEAVE A COMMENT</h2>
+            <div class="col-md-12">
+                <form id="contact_form" class="form email-form" method="post" action="" autocomplete="off">
+                    <div>
+                        <input type="text" name="subject" id="subject" class="input-contact" placeholder="Subject">
+                        <input type="text" name="name" id="name" class="input-contact" placeholder="Name">
+                    </div>
+                    <div>
+                        <textarea type="text" name="message" id="message" class="input-contact" placeholder="Message" cols="30" rows="7"></textarea>
+                        <button type="submit" class="btn submit-contact">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="box-content right-position">
+            <div class="blog-right-column">
+                <h2>Tags</h2>
+                <ul>
+                    <li ng-repeat="tag in tagList|limitTo:5">
+                        <a href="http://www.ilcorsaronero.it/progettienvato/SiteParallax/ParallaxSite/minime/html/blog.html#">
+                            <i class="fa fa-angle-double-right"></i> {{tag.name}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-content blog-r-posts">
+            <div class="blog-right-column">
+                <h2>Best Posts</h2>
+                <ul>
+                    <li ng-repeat="post in bestPosts|limitTo:5"><a style="cursor: pointer" ng-click="changeLocation('#?post='+post.key)"><i class="fa fa-angle-double-right"></i> {{post.titulo}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div><!--close row-->
