@@ -3,11 +3,12 @@
     <div class="col-md-8" >
         <div class="box-content">
             <div class="blog-item" ng-repeat="post in posts" >
-                <div class="blog-img" ><img src="files/{{post.images[0]}}" alt=""></div>
+                <div class="blog-img" ng-click="changeLocation('#?post='+post.key)" style="cursor: pointer"><img src="files/{{post.images[0]}}" alt=""></div>
                 <div class="blog-desc box-text">
-                    <h2>{{post.titulo}} <span class="date-blog">{{getTags(post.tags)}} / {{post.fecha[0]}}, {{post.fecha[1]}}</span></h2>
+                    <h2><span ng-click="changeLocation('#?post='+post.key)" style="cursor: pointer">{{post.titulo}}</span><span class="date-blog">{{getTags(post.tags)}} / {{post.fecha[0]}}, {{post.fecha[1]}}</span></h2>
                     <p  compile="post.description"></p>
                     <br>
+                    <a ng-click="changeLocation('#?post='+post.key)" style="cursor: pointer" class="blog-read"> Leer mas</a>
                 </div>
             </div>
 

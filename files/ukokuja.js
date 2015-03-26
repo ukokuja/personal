@@ -107,7 +107,7 @@ angular.module('ukokuja', [])
                 $scope.includes = "files/404.html";
             }else{
                 $scope.includes = "files/posts.html";
-                $scope.postRef.limitToLast(5).on("value", function(snapshot) {
+                $scope.postRef.limitToLast(5).once("value", function(snapshot) {
                     $timeout(function(){
                         angular.forEach(snapshot.val(), function(value, key){
                             $scope.tags = $scope.tags.concat(value.tags);
