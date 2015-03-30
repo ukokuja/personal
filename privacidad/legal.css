@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0; border:0; }
+body{ background-color:#000;font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#fff;}
+a{ color:#fff;}
+/*MENSAJE*/
+#mensaje{width:560px;margin:0 auto; color:#fff}
+#mensaje a{color:#ffffff; font-family: Arial, Helvetica, sans-serif; font-size:12px;font-weight:normal; text-decoration:none;}
+#mensaje .txt_1{font-size:18px;font-weight:bold;width:560px;margin:10px auto; line-height:42px}
+#mensaje .txt_2{font-size:14px;font-weight:normal;width:560px;margin:10px auto}
+#mensaje .txt_3{font-size:18px;font-weight:bold;width:560px;margin:10px auto}
+#mensaje .txt_4{font-size:18px;font-weight:bold;width:560px;margin:10px auto 2px auto}
+#mensaje .txt_5{font-size:11px;font-weight:normal;width:560px;margin:10px auto;line-height:14px}
+
